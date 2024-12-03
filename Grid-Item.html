@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid/-item</title>
+
+    <style>
+        html {
+            box-sizing: border-box;
+        }
+
+        body {
+            color: aliceblue;
+            font-size: 36px;
+        }
+
+        box {
+            padding: 36px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 100px 50px 80px 200px;
+            grid-template-rows: 80px 100px 100px;
+            gap: 8px;
+        }
+
+        /*Box 1 deve começar na coluna 1 e terminar na coluna 5, começar na linha 3 e terminar na linha 4*/
+        .box1 {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            background: black;
+            text-align: center;
+        }
+
+        /*Box 2 deve começar na coluna 3 e terminar na coluna 5, começar na linha 1 e terminar na linha 3*/
+        .box2 {
+            grid-column-start: 3;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            background: rgb(59, 58, 58);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"> Box 1</div>
+        <div class="box2">Box 2</div>
+    </div>
+</body>
+</html>
